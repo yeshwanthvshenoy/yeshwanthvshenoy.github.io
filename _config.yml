@@ -5,7 +5,8 @@ description         : >-                               # >- means to ignore newl
 
 baseurl             : ""
 repository          : yeshwanthvshenoy/yeshwanthvshenoy.github.io
-remote_theme       : YoussefRaafatNasry/portfolYOU
+remote_theme        : YoussefRaafatNasry/portfolYOU
+google_analytics    : G-F35QEVNWJW
 
 ### Author Info ###
 author:

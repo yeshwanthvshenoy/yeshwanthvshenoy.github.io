@@ -19,5 +19,10 @@
   
   <!-- Custom CSS -->
   <link rel="stylesheet" href="{{ '/assets/css/style.css' | relative_url }}" type="text/css">
+  
+  <!-- Google Analytics -->
+  {% if site.google_analytics and jekyll.environment == 'production' %}
+    {% include analytics.html %}
+  {% endif %}
 
 </head>
