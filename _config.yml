@@ -1,0 +1,51 @@
+### Site Settings ###
+title               : Yeshwanth V Shenoy
+description         : >-                               # >- means to ignore newlines until "url:"
+                      Software Engineer | Java | Spring Boot | Python | Microservices | Distributed Systems
+
+baseurl             : ""
+repository          : yeshwanthvshenoy/yeshwanthvshenoy.github.io
+remote_theme       : YoussefRaafatNasry/portfolYOU
+
+### Author Info ###
+author:
+  name              : Yeshwanth V Shenoy
+  image             : https://avatars0.githubusercontent.com/u/39550447?s=460&u=21d7dd092b60f620551f125bd09febb0746cef97&v=4
+  email             : yeshwanthvshenoy@gmail.com
+  github            : yeshwanthvshenoy
+  linkedin          : yeshwanthvshenoy
+  medium            : yeshwanthvshenoy
+  stackoverflow     : 12767234
+
+
+### Pagination ###
+paginate: 6
+paginate_path: "/articles/page-:num/"
+
+
+### Posts Permalink ###
+permalink: articles/:title
+
+
+### Collections ###
+collections:
+  projects:
+    output: true
+    permalink: /projects/:name
+
+
+### Defaults for collections ###
+defaults:
+  - scope:
+      path: ""
+      type: "projects"
+    values:
+      layout: "page"
+
+
+### Exclude from processing ###
+exclude:
+- README.md
+- LICENSE
+- Gemfile
+- Gemfile.lock

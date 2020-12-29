@@ -1,0 +1,39 @@
+- name: Sprint Boot
+  percentage: 80
+  color: info
+
+- name: Hibernate / jOOQ
+  percentage: 75
+  color: success
+
+- name: Flask
+  percentage: 70
+  color: danger
+
+- name: Fast API
+  percentage: 70
+  color: dark
+
+- name: Proto3 / Protobuf
+  percentage: 80
+  color: 
+
+- name: Apache Kafka
+  percentage: 65
+  color: info
+
+- name: Node.js
+  percentage: 70
+  color: success
+
+- name: Angular
+  percentage: 75
+  color: danger
+
+- name: Docker
+  percentage: 80
+  color: dark
+
+- name: Kubernetes
+  percentage: 70
+  color: 
