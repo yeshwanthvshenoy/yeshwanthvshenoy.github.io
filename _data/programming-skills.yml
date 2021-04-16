@@ -1,10 +1,10 @@
 - name: Java
-  percentage: 80
+  percentage: 90
   color: danger
 
 - name: Python
   percentage: 70
-  color:
+  color: info
 
 - name: Typescript
   percentage: 70
@@ -12,24 +12,4 @@
 
 - name: Go
   percentage: 60
-  color: success
-
-- name: MySQL / PostgreSQL
-  percentage: 75
-  color: info
-
-- name: Firebase
-  percentage: 60
-  color: danger
-
-- name: Redis
-  percentage: 75
-  color:
-
-- name: AWS
-  percentage: 70
-  color: dark
-
-- name: GCP
-  percentage: 80
   color: success

@@ -1,32 +1,28 @@
-- name: Sprint Boot
+- name: SonarQube
   percentage: 80
   color: info
 
-- name: Hibernate / jOOQ
+- name: Amazon Web Service
   percentage: 75
   color: success
 
-- name: Flask
-  percentage: 70
-  color: danger
-
-- name: Fast API
+- name: Google Cloud Compute
   percentage: 70
   color: dark
 
-- name: Proto3 / Protobuf
+- name: Open Zipkin
   percentage: 80
-  color: 
+  color: danger
 
-- name: Apache Kafka
-  percentage: 65
+- name: Jenkins
+  percentage: 70
   color: info
 
-- name: Node.js
+- name: Spinnkaer
   percentage: 70
   color: success
 
-- name: Angular
+- name: Nginx/Ingress
   percentage: 75
   color: danger
 
@@ -36,4 +32,4 @@
 
 - name: Kubernetes
   percentage: 70
-  color: 
+  color: info
