@@ -1,2 +1,2 @@
 # Yeshwanth V Shenoy
-This is my personal portfolio/blog using Jekyll.
+This is my personal portfolio website hosted with Github Pages.
