@@ -1,66 +1,67 @@
-// Typed.js — hero typing animation
+// Nav scroll effect + active section tracking
+const nav      = document.getElementById('nav');
+const navLinks = document.querySelectorAll('.nav-link');
+const sections = document.querySelectorAll('section[id]');
+
+window.addEventListener('scroll', () => {
+  nav.classList.toggle('scrolled', window.scrollY > 20);
+}, { passive: true });
+
+const sectionObserver = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      navLinks.forEach(l => l.classList.remove('active'));
+      const active = document.querySelector(`.nav-link[href="#${entry.target.id}"]`);
+      if (active) active.classList.add('active');
+    }
+  });
+}, { threshold: 0.35 });
+
+sections.forEach(s => sectionObserver.observe(s));
+
+// Scroll-in animations
+const animObserver = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      const delay = parseInt(entry.target.dataset.delay || 0);
+      setTimeout(() => entry.target.classList.add('in-view'), delay);
+      animObserver.unobserve(entry.target);
+    }
+  });
+}, { threshold: 0.08 });
+
+document.querySelectorAll('[data-animate]').forEach(el => animObserver.observe(el));
+
+// Mobile menu
+const hamburger     = document.getElementById('hamburger');
+const mobileOverlay = document.getElementById('mobileOverlay');
+
+hamburger.addEventListener('click', () => {
+  const open = mobileOverlay.classList.toggle('open');
+  hamburger.classList.toggle('open', open);
+  document.body.style.overflow = open ? 'hidden' : '';
+});
+
+mobileOverlay.querySelectorAll('.mobile-link').forEach(link => {
+  link.addEventListener('click', () => {
+    mobileOverlay.classList.remove('open');
+    hamburger.classList.remove('open');
+    document.body.style.overflow = '';
+  });
+});
+
+// Typed.js
 new Typed('#typed', {
   strings: [
     'Staff Software Engineer',
     'Platform Engineering',
-    'DevEx',
+    'Developer Experience',
     'Distributed Systems',
-    'Cloud Native SaaS'
+    'Cloud Native SaaS',
   ],
-  typeSpeed: 80,
-  backSpeed: 50,
-  backDelay: 2000,
+  typeSpeed: 75,
+  backSpeed: 45,
+  backDelay: 2200,
   loop: true,
+  cursorChar: '|',
 });
-
-// Fade-in on scroll — one-time trigger per element
-const fadeObserver = new IntersectionObserver((entries) => {
-  entries.forEach(entry => {
-    if (entry.isIntersecting) {
-      entry.target.classList.add('visible');
-      fadeObserver.unobserve(entry.target);
-    }
-  });
-}, { threshold: 0.15 });
-
-document.querySelectorAll('.fade-in').forEach(el => fadeObserver.observe(el));
-
-// Active nav highlight — updates as sections enter viewport
-const navLinks = document.querySelectorAll('.nav-item');
-
-const navObserver = new IntersectionObserver((entries) => {
-  entries.forEach(entry => {
-    if (entry.isIntersecting) {
-      navLinks.forEach(link => link.classList.remove('active'));
-      const activeLink = document.querySelector(`.nav-item[href="#${entry.target.id}"]`);
-      if (activeLink) activeLink.classList.add('active');
-    }
-  });
-}, { threshold: 0.5 });
-
-document.querySelectorAll('section[id]').forEach(section => navObserver.observe(section));
-
-// Mobile sidebar toggle
-const menuToggle = document.querySelector('.menu-toggle');
-const sidebar = document.querySelector('.sidebar');
-
-if (menuToggle && sidebar) {
-  menuToggle.addEventListener('click', (e) => {
-    e.stopPropagation();
-    sidebar.classList.toggle('mobile-open');
-  });
-
-  // Close when clicking outside
-  document.addEventListener('click', (e) => {
-    if (!sidebar.contains(e.target) && !menuToggle.contains(e.target)) {
-      sidebar.classList.remove('mobile-open');
-    }
-  });
-
-  // Close sidebar when a nav link is clicked on mobile
-  navLinks.forEach(link => {
-    link.addEventListener('click', () => {
-      sidebar.classList.remove('mobile-open');
-    });
-  });
-}

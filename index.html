@@ -3,185 +3,282 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Yeshwanth V Shenoy</title>
+  <title>Yeshwanth V Shenoy — Staff Engineer</title>
   <meta name="description" content="Staff Software Engineer — Platform Engineering, Distributed Systems, Cloud Native SaaS">
   <link rel="icon" type="image/png" href="/favicon.png">
 
-  <!-- Google Fonts -->
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@300;400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
 
-  <!-- Vendor CSS -->
-  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-  <link href="assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/style.css">
 
-  <!-- Main CSS -->
-  <link href="assets/css/style.css" rel="stylesheet">
-
-  <!-- Google Analytics -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-F35QEVNWJW"></script>
   <script>
     window.dataLayer = window.dataLayer || [];
     function gtag(){dataLayer.push(arguments);}
-    gtag(‘js’, new Date());
-    gtag(‘config’, ‘G-F35QEVNWJW’);
+    gtag('js', new Date());
+    gtag('config', 'G-F35QEVNWJW');
   </script>
 </head>
 <body>
 
-  <!-- Mobile header (hidden on desktop) -->
-  <header class="mobile-header d-lg-none">
-    <span class="mobile-brand">YVS</span>
-    <button class="menu-toggle" aria-label="Toggle navigation">
-      <i class="bx bx-menu"></i>
-    </button>
-  </header>
+  <!-- Navigation -->
+  <nav class="nav" id="nav">
+    <div class="nav-inner">
+      <a class="nav-logo" href="#about">
+        <span class="logo-bracket">{</span>YVS<span class="logo-bracket">}</span>
+      </a>
+      <div class="nav-links">
+        <a href="#about"      class="nav-link">about</a>
+        <a href="#skills"     class="nav-link">skills</a>
+        <a href="#experience" class="nav-link">experience</a>
+        <a href="#contact"    class="nav-link">contact</a>
+      </div>
+      <div class="nav-actions">
+        <a href="https://drive.google.com/file/d/1qBiGAyf0xXheKbtoJrWGcVWLssAcLRdb/view?usp=sharing"
+           target="_blank" class="btn-resume">Resume ↗</a>
+        <button class="hamburger" id="hamburger" aria-label="Menu">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </nav>
 
-  <!-- Sidebar -->
-  <aside class="sidebar">
-    <div class="sidebar-brand">
-      <span class="brand-name">Yeshwanth V Shenoy</span>
-      <span class="brand-role">// staff_engineer</span>
+  <!-- Mobile Overlay -->
+  <div class="mobile-overlay" id="mobileOverlay">
+    <div class="mobile-menu">
+      <a href="#about"      class="mobile-link">about</a>
+      <a href="#skills"     class="mobile-link">skills</a>
+      <a href="#experience" class="mobile-link">experience</a>
+      <a href="#contact"    class="mobile-link">contact</a>
+      <a href="https://drive.google.com/file/d/1qBiGAyf0xXheKbtoJrWGcVWLssAcLRdb/view?usp=sharing"
+         target="_blank" class="mobile-link mobile-resume">Resume ↗</a>
+    </div>
+  </div>
+
+  <!-- Hero / About -->
+  <section id="about" class="hero">
+    <div class="hero-bg">
+      <div class="orb orb-1"></div>
+      <div class="orb orb-2"></div>
+      <div class="orb orb-3"></div>
+    </div>
+    <div class="container hero-container">
+      <div class="hero-grid">
+
+        <!-- Left: Content -->
+        <div class="hero-content" data-animate>
+          <div class="hero-badge">
+            <span class="badge-dot"></span>
+            Currently @ Okta · Staff Engineer
+          </div>
+          <h1 class="hero-name">
+            <span class="name-line">Yeshwanth</span>
+            <span class="name-line gradient-text">V Shenoy</span>
+          </h1>
+          <div class="hero-typed-wrap">
+            <span id="typed"></span>
+          </div>
+          <p class="hero-desc">
+            11+ years building distributed systems and platform engineering at scale.
+            Shipping developer tooling, GitOps platforms, and DevEx infrastructure
+            that teams actually love to use.
+          </p>
+          <div class="hero-ctas">
+            <a href="#experience" class="btn btn-primary">View Work</a>
+            <a href="#contact"    class="btn btn-ghost">Get in Touch</a>
+          </div>
+          <div class="hero-socials">
+            <a href="mailto:yeshwanthvshenoy@gmail.com" class="social-pill" title="Email">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/></svg>
+            </a>
+            <a href="https://www.linkedin.com/in/yeshwanthvshenoy" target="_blank" class="social-pill" title="LinkedIn">
+              <svg viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+            </a>
+            <a href="https://www.github.com/yeshwanthvshenoy" target="_blank" class="social-pill" title="GitHub">
+              <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z"/></svg>
+            </a>
+            <a href="https://stackoverflow.com/u/12767234" target="_blank" class="social-pill" title="Stack Overflow">
+              <svg viewBox="0 0 24 24" fill="currentColor"><path d="M15.725 0l-1.72 1.277 6.39 8.588 1.716-1.277L15.725 0zm-3.94 3.418l-1.369 1.644 8.225 6.85 1.369-1.644-8.225-6.85zm-3.143 4.465l-.905 1.94 9.702 4.517.904-1.94-9.701-4.517zm-1.494 5.615l-.4 2.08 10.476 2.013.4-2.08-10.476-2.013zM0 11.366V24h19.948v-12.634h-2.427v10.207H2.427V13.793H0v-2.427z"/></svg>
+            </a>
+            <a href="https://medium.com/@yeshwanthvshenoy" target="_blank" class="social-pill" title="Medium">
+              <svg viewBox="0 0 24 24" fill="currentColor"><path d="M13.54 12a6.8 6.8 0 01-6.77 6.82A6.8 6.8 0 010 12a6.8 6.8 0 016.77-6.82A6.8 6.8 0 0113.54 12zM20.96 12c0 3.54-1.51 6.42-3.38 6.42-1.87 0-3.39-2.88-3.39-6.42s1.52-6.42 3.39-6.42 3.38 2.88 3.38 6.42M24 12c0 3.17-.53 5.75-1.19 5.75-.66 0-1.19-2.58-1.19-5.75s.53-5.75 1.19-5.75C23.47 6.25 24 8.83 24 12z"/></svg>
+            </a>
+          </div>
+        </div>
+
+        <!-- Right: Code Window -->
+        <div class="hero-visual" data-animate data-delay="150">
+          <div class="code-window">
+            <div class="code-window-header">
+              <div class="code-dots">
+                <span class="dot dot-red"></span>
+                <span class="dot dot-yellow"></span>
+                <span class="dot dot-green"></span>
+              </div>
+              <span class="code-filename">engineer.ts</span>
+            </div>
+            <div class="code-window-body">
+<pre class="code-block"><code><span class="ck">const</span> <span class="cv">engineer</span> <span class="cp">=</span> <span class="cp">{</span>
+  <span class="ck2">name</span><span class="cp">:</span>  <span class="cs">"Yeshwanth V Shenoy"</span><span class="cp">,</span>
+  <span class="ck2">role</span><span class="cp">:</span>  <span class="cs">"Staff Software Engineer"</span><span class="cp">,</span>
+  <span class="ck2">years</span><span class="cp">:</span> <span class="cn">11</span><span class="cp">,</span>
+  <span class="ck2">at</span><span class="cp">:</span>    <span class="cs">"Okta"</span><span class="cp">,</span>
+  <span class="ck2">focus</span><span class="cp">:</span> <span class="cp">[</span>
+    <span class="cs">"Platform Engineering"</span><span class="cp">,</span>
+    <span class="cs">"Distributed Systems"</span><span class="cp">,</span>
+    <span class="cs">"Cloud Native SaaS"</span><span class="cp">,</span>
+    <span class="cs">"Developer Experience"</span><span class="cp">,</span>
+  <span class="cp">],</span>
+  <span class="ck2">sla</span><span class="cp">:</span>   <span class="cs">"99.99%"</span><span class="cp">,</span>
+  <span class="ck2">stack</span><span class="cp">:</span> <span class="cp">[</span>
+    <span class="cs">"Java"</span><span class="cp">,</span> <span class="cs">"Go"</span><span class="cp">,</span>
+    <span class="cs">"Python"</span><span class="cp">,</span> <span class="cs">"TypeScript"</span><span class="cp">,</span>
+    <span class="cs">"Kubernetes"</span><span class="cp">,</span>
+  <span class="cp">],</span>
+<span class="cp">};</span></code></pre>
+            </div>
+          </div>
+        </div>
+
+      </div>
     </div>
 
-    <nav class="sidebar-nav">
-      <a href="#about" class="nav-item active">
-        <div class="nav-marker"></div>
-        <span class="nav-label">about</span>
-      </a>
-      <a href="#skills" class="nav-item">
-        <div class="nav-marker"></div>
-        <span class="nav-label">skills</span>
-      </a>
-      <a href="#experience" class="nav-item">
-        <div class="nav-marker"></div>
-        <span class="nav-label">experience</span>
-      </a>
-      <a href="#contact" class="nav-item">
-        <div class="nav-marker"></div>
-        <span class="nav-label">contact</span>
-      </a>
-    </nav>
-
-    <div class="sidebar-social">
-      <a href="mailto:yeshwanthvshenoy@gmail.com" class="social-icon" title="Email" target="_blank">
-        <i class="bx bx-mail-send"></i>
-      </a>
-      <a href="https://www.linkedin.com/in/yeshwanthvshenoy" class="social-icon" title="LinkedIn" target="_blank">
-        <i class="bx bxl-linkedin"></i>
-      </a>
-      <a href="https://www.github.com/yeshwanthvshenoy" class="social-icon" title="GitHub" target="_blank">
-        <i class="bx bxl-github"></i>
-      </a>
-      <a href="https://stackoverflow.com/u/12767234" class="social-icon" title="Stack Overflow" target="_blank">
-        <i class="bx bxl-stack-overflow"></i>
-      </a>
-      <a href="https://medium.com/@yeshwanthvshenoy" class="social-icon" title="Medium" target="_blank">
-        <i class="bx bxl-medium"></i>
-      </a>
+    <!-- Stats Bar -->
+    <div class="stats-bar">
+      <div class="container">
+        <div class="stats-grid">
+          <div class="stat-item">
+            <span class="stat-number">11+</span>
+            <span class="stat-label">Years Experience</span>
+          </div>
+          <div class="stat-sep"></div>
+          <div class="stat-item">
+            <span class="stat-number">4</span>
+            <span class="stat-label">Companies</span>
+          </div>
+          <div class="stat-sep"></div>
+          <div class="stat-item">
+            <span class="stat-number">99.99%</span>
+            <span class="stat-label">SLA Delivered</span>
+          </div>
+        </div>
+      </div>
     </div>
-  </aside>
+  </section>
 
-  <!-- Main content -->
-  <main class="content">
-
-    <!-- About -->
-    <section id="about" class="section">
-      <div class="section-label">// about</div>
-      <h1 class="hero-name">Yeshwanth<br>V Shenoy</h1>
-      <div class="hero-typing"><span id="typed"></span></div>
-      <p class="hero-desc">
-        11+ years building distributed systems and platform engineering at scale.
-        Currently at Okta — shipping developer tooling, Git Ops platforms, and DevEx infrastructure.
-      </p>
-      <div class="stats-row fade-in">
-        <div class="stat-item">
-          <span class="stat-number">11+</span>
-          <span class="stat-label">Years Exp</span>
-        </div>
-        <div class="stat-item">
-          <span class="stat-number">4</span>
-          <span class="stat-label">Companies</span>
-        </div>
-        <div class="stat-item">
-          <span class="stat-number">99.99%</span>
-          <span class="stat-label">SLA Delivered</span>
-        </div>
+  <!-- Skills -->
+  <section id="skills" class="section">
+    <div class="container">
+      <div class="section-header" data-animate>
+        <div class="section-eyebrow">expertise</div>
+        <h2 class="section-title">Skills &amp; Technologies</h2>
       </div>
-    </section>
+      <div class="skills-grid" data-animate data-delay="100">
 
-    <!-- Skills -->
-    <section id="skills" class="section">
-      <div class="section-label">// skills</div>
-      <div class="skills-grid fade-in">
-        <div class="skill-category">
-          <div class="skill-category-label">languages</div>
+        <div class="skill-card">
+          <div class="skill-card-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M8 9l3 3-3 3m5 0h3M5 20h14a2 2 0 002-2V6a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"/></svg>
+          </div>
+          <h3 class="skill-card-title">Languages</h3>
           <div class="skill-tags">
-            <span class="tag tag-primary">Java</span>
-            <span class="tag tag-primary">Python</span>
-            <span class="tag tag-primary">Go</span>
-            <span class="tag tag-primary">TypeScript</span>
+            <span class="skill-tag primary">Java</span>
+            <span class="skill-tag primary">Python</span>
+            <span class="skill-tag primary">Go</span>
+            <span class="skill-tag primary">TypeScript</span>
           </div>
         </div>
-        <div class="skill-category">
-          <div class="skill-category-label">infrastructure</div>
+
+        <div class="skill-card">
+          <div class="skill-card-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M5 12h14M5 12a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v4a2 2 0 01-2 2M5 12a2 2 0 00-2 2v4a2 2 0 002 2h14a2 2 0 002-2v-4a2 2 0 00-2-2m-2-4h.01M17 16h.01"/></svg>
+          </div>
+          <h3 class="skill-card-title">Infrastructure</h3>
           <div class="skill-tags">
-            <span class="tag tag-primary">Kubernetes</span>
-            <span class="tag tag-primary">Docker</span>
-            <span class="tag tag-secondary">Kafka</span>
-            <span class="tag tag-secondary">gRPC</span>
-            <span class="tag tag-secondary">GCP</span>
-            <span class="tag tag-secondary">AWS</span>
+            <span class="skill-tag primary">Kubernetes</span>
+            <span class="skill-tag primary">Docker</span>
+            <span class="skill-tag secondary">Kafka</span>
+            <span class="skill-tag secondary">gRPC</span>
+            <span class="skill-tag secondary">GCP</span>
+            <span class="skill-tag secondary">AWS</span>
           </div>
         </div>
-        <div class="skill-category">
-          <div class="skill-category-label">databases</div>
+
+        <div class="skill-card">
+          <div class="skill-card-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><ellipse cx="12" cy="5" rx="9" ry="3"/><path d="M21 12c0 1.66-4 3-9 3s-9-1.34-9-3"/><path d="M3 5v14c0 1.66 4 3 9 3s9-1.34 9-3V5"/></svg>
+          </div>
+          <h3 class="skill-card-title">Databases</h3>
           <div class="skill-tags">
-            <span class="tag tag-secondary">PostgreSQL</span>
-            <span class="tag tag-secondary">MySQL</span>
-            <span class="tag tag-secondary">MongoDB</span>
-            <span class="tag tag-secondary">Redis</span>
+            <span class="skill-tag secondary">PostgreSQL</span>
+            <span class="skill-tag secondary">MySQL</span>
+            <span class="skill-tag secondary">MongoDB</span>
+            <span class="skill-tag secondary">Redis</span>
           </div>
         </div>
-        <div class="skill-category">
-          <div class="skill-category-label">observability</div>
+
+        <div class="skill-card">
+          <div class="skill-card-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"/></svg>
+          </div>
+          <h3 class="skill-card-title">Observability</h3>
           <div class="skill-tags">
-            <span class="tag tag-secondary">Prometheus</span>
-            <span class="tag tag-secondary">Grafana</span>
-            <span class="tag tag-secondary">Datadog</span>
-            <span class="tag tag-secondary">PagerDuty</span>
+            <span class="skill-tag secondary">Prometheus</span>
+            <span class="skill-tag secondary">Grafana</span>
+            <span class="skill-tag secondary">Datadog</span>
+            <span class="skill-tag secondary">PagerDuty</span>
           </div>
         </div>
+
       </div>
-    </section>
+    </div>
+  </section>
 
-    <!-- Experience -->
-    <section id="experience" class="section">
-      <div class="section-label">// experience</div>
-      <div class="exp-list fade-in">
+  <!-- Experience -->
+  <section id="experience" class="section section-dark">
+    <div class="container">
+      <div class="section-header" data-animate>
+        <div class="section-eyebrow">career</div>
+        <h2 class="section-title">Experience</h2>
+      </div>
+      <div class="timeline" data-animate data-delay="100">
 
-        <div class="exp-item">
-          <div class="exp-meta">
-            <span class="exp-company">Okta</span>
-            <span class="exp-dates">Jan 2024 – Present</span>
-          </div>
-          <div class="exp-body">
-            <div class="exp-title">Staff Software Engineer</div>
-            <ul class="exp-bullets">
-              <li>Led developer tooling that accelerated code delivery to production by 15%, ensuring adherence to Okta’s security standards</li>
-              <li>Initiated and delivered a Developer Portal (akin to Backstage) for Git Admin and Git Ops, demonstrating end-to-end ownership from ideation to adoption</li>
+        <div class="timeline-item">
+          <div class="timeline-marker"><div class="timeline-dot"></div></div>
+          <div class="timeline-card">
+            <div class="timeline-meta">
+              <span class="timeline-company">Okta</span>
+              <span class="timeline-dates">Jan 2024 – Present</span>
+            </div>
+            <div class="timeline-role">Staff Software Engineer</div>
+            <div class="timeline-tags">
+              <span class="tl-tag">GitOps</span>
+              <span class="tl-tag">Developer Tooling</span>
+              <span class="tl-tag">DevEx</span>
+            </div>
+            <ul class="timeline-bullets">
+              <li>Led developer tooling that accelerated code delivery to production by 15%, ensuring adherence to Okta's security standards</li>
+              <li>Initiated and delivered a Developer Portal (akin to Backstage) for Git Admin and GitOps, demonstrating end-to-end ownership from ideation to adoption</li>
               <li>Mentored a team of 6 engineers toward quarterly roadmap delivery and collaborated with leadership on roadmap planning</li>
             </ul>
           </div>
         </div>
 
-        <div class="exp-item">
-          <div class="exp-meta">
-            <span class="exp-company">Rakuten</span>
-            <span class="exp-dates">Aug 2020 – Dec 2023</span>
-          </div>
-          <div class="exp-body">
-            <div class="exp-title">Lead Software Engineer</div>
-            <ul class="exp-bullets">
+        <div class="timeline-item">
+          <div class="timeline-marker"><div class="timeline-dot"></div></div>
+          <div class="timeline-card">
+            <div class="timeline-meta">
+              <span class="timeline-company">Rakuten</span>
+              <span class="timeline-dates">Aug 2020 – Dec 2023</span>
+            </div>
+            <div class="timeline-role">Lead Software Engineer</div>
+            <div class="timeline-tags">
+              <span class="tl-tag">Microservices</span>
+              <span class="tl-tag">Kubernetes</span>
+              <span class="tl-tag">Cloud Platform</span>
+            </div>
+            <ul class="timeline-bullets">
               <li>Built a high-load secret manager with 99.99% SLA, onboarded onto Internal Cloud Platform within 8 months</li>
               <li>Architected a Low Code Test Automation Platform widely adopted for release and regression testing</li>
               <li>Decomposed a large monolith into microservices on Kubernetes; transformed team into a self-organizing deployment unit</li>
@@ -189,14 +286,20 @@
           </div>
         </div>
 
-        <div class="exp-item">
-          <div class="exp-meta">
-            <span class="exp-company">Freshworks</span>
-            <span class="exp-dates">May 2018 – Aug 2020</span>
-          </div>
-          <div class="exp-body">
-            <div class="exp-title">Senior Software Engineer</div>
-            <ul class="exp-bullets">
+        <div class="timeline-item">
+          <div class="timeline-marker"><div class="timeline-dot"></div></div>
+          <div class="timeline-card">
+            <div class="timeline-meta">
+              <span class="timeline-company">Freshworks</span>
+              <span class="timeline-dates">May 2018 – Aug 2020</span>
+            </div>
+            <div class="timeline-role">Senior Software Engineer</div>
+            <div class="timeline-tags">
+              <span class="tl-tag">Real-time Systems</span>
+              <span class="tl-tag">Cloud</span>
+              <span class="tl-tag">OWASP</span>
+            </div>
+            <ul class="timeline-bullets">
               <li>Built real-time microservices with 99.999% SLA and latencies under 250ms for Freshworks products</li>
               <li>Reduced infrastructure costs ~20% via cloud-agnostic tooling and open source adoption</li>
               <li>Steered OWASP compliance; integrated SonarQube for code quality enforcement</li>
@@ -204,14 +307,19 @@
           </div>
         </div>
 
-        <div class="exp-item">
-          <div class="exp-meta">
-            <span class="exp-company">TPF Software</span>
-            <span class="exp-dates">May 2015 – May 2018</span>
-          </div>
-          <div class="exp-body">
-            <div class="exp-title">Software Engineer</div>
-            <ul class="exp-bullets">
+        <div class="timeline-item">
+          <div class="timeline-marker"><div class="timeline-dot"></div></div>
+          <div class="timeline-card">
+            <div class="timeline-meta">
+              <span class="timeline-company">TPF Software</span>
+              <span class="timeline-dates">May 2015 – May 2018</span>
+            </div>
+            <div class="timeline-role">Software Engineer</div>
+            <div class="timeline-tags">
+              <span class="tl-tag">Mainframe</span>
+              <span class="tl-tag">IDE Tooling</span>
+            </div>
+            <ul class="timeline-bullets">
               <li>Built IDE-like "Find Usages" tooling for mainframe developers, directly increasing customer revenue by 2%</li>
               <li>Shipped critical features with 100% compliance on security audits and load testing</li>
             </ul>
@@ -219,42 +327,81 @@
         </div>
 
       </div>
-    </section>
+    </div>
+  </section>
 
-    <!-- Contact -->
-    <section id="contact" class="section">
-      <div class="section-label">// contact</div>
-      <div class="contact-grid fade-in">
+  <!-- Contact -->
+  <section id="contact" class="section">
+    <div class="container">
+      <div class="section-header" data-animate>
+        <div class="section-eyebrow">reach out</div>
+        <h2 class="section-title">Get in Touch</h2>
+        <p class="section-desc">Open to interesting problems, senior IC roles, and conversations about platform engineering.</p>
+      </div>
+      <div class="contact-grid" data-animate data-delay="100">
         <a href="mailto:yeshwanthvshenoy@gmail.com" class="contact-card">
-          <div class="contact-card-label">email</div>
-          <div class="contact-card-value">yeshwanthvshenoy@gmail.com</div>
+          <div class="contact-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/></svg>
+          </div>
+          <div class="contact-info">
+            <div class="contact-label">Email</div>
+            <div class="contact-value">yeshwanthvshenoy@gmail.com</div>
+          </div>
+          <span class="contact-arrow">↗</span>
         </a>
         <a href="https://www.linkedin.com/in/yeshwanthvshenoy" target="_blank" class="contact-card">
-          <div class="contact-card-label">linkedin</div>
-          <div class="contact-card-value">in/yeshwanthvshenoy</div>
+          <div class="contact-icon">
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+          </div>
+          <div class="contact-info">
+            <div class="contact-label">LinkedIn</div>
+            <div class="contact-value">in/yeshwanthvshenoy</div>
+          </div>
+          <span class="contact-arrow">↗</span>
         </a>
         <a href="https://www.github.com/yeshwanthvshenoy" target="_blank" class="contact-card">
-          <div class="contact-card-label">github</div>
-          <div class="contact-card-value">github.com/yeshwanthvshenoy</div>
+          <div class="contact-icon">
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z"/></svg>
+          </div>
+          <div class="contact-info">
+            <div class="contact-label">GitHub</div>
+            <div class="contact-value">github.com/yeshwanthvshenoy</div>
+          </div>
+          <span class="contact-arrow">↗</span>
         </a>
         <a href="https://medium.com/@yeshwanthvshenoy" target="_blank" class="contact-card">
-          <div class="contact-card-label">medium</div>
-          <div class="contact-card-value">@yeshwanthvshenoy</div>
+          <div class="contact-icon">
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M13.54 12a6.8 6.8 0 01-6.77 6.82A6.8 6.8 0 010 12a6.8 6.8 0 016.77-6.82A6.8 6.8 0 0113.54 12zM20.96 12c0 3.54-1.51 6.42-3.38 6.42-1.87 0-3.39-2.88-3.39-6.42s1.52-6.42 3.39-6.42 3.38 2.88 3.38 6.42M24 12c0 3.17-.53 5.75-1.19 5.75-.66 0-1.19-2.58-1.19-5.75s.53-5.75 1.19-5.75C23.47 6.25 24 8.83 24 12z"/></svg>
+          </div>
+          <div class="contact-info">
+            <div class="contact-label">Medium</div>
+            <div class="contact-value">@yeshwanthvshenoy</div>
+          </div>
+          <span class="contact-arrow">↗</span>
         </a>
       </div>
-      <a href="https://drive.google.com/file/d/1qBiGAyf0xXheKbtoJrWGcVWLssAcLRdb/view?usp=sharing"
-         target="_blank" class="resume-btn">
-        ↗ view resume
-      </a>
-    </section>
+      <div data-animate data-delay="200">
+        <a href="https://drive.google.com/file/d/1qBiGAyf0xXheKbtoJrWGcVWLssAcLRdb/view?usp=sharing"
+           target="_blank" class="btn btn-primary btn-lg">
+          View Full Resume ↗
+        </a>
+      </div>
+    </div>
+  </section>
 
-  </main>
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-inner">
+        <div class="footer-logo">
+          <span class="logo-bracket">{</span>YVS<span class="logo-bracket">}</span>
+        </div>
+        <div class="footer-text">Yeshwanth V Shenoy · Staff Software Engineer</div>
+      </div>
+    </div>
+  </footer>
 
-  <!-- Vendor JS -->
   <script src="assets/vendor/typed.js/typed.min.js"></script>
-
-  <!-- Main JS -->
   <script src="assets/js/main.js"></script>
-
 </body>
 </html>
