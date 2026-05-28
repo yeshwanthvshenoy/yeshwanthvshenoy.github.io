@@ -54,7 +54,6 @@ mobileOverlay.querySelectorAll('.mobile-link').forEach(link => {
 async function loadBlog() {
   const grid  = document.getElementById('blog-grid');
   const empty = document.getElementById('blog-empty');
-  const cta   = document.getElementById('blog-cta');
   if (!grid) return;
 
   try {
@@ -124,7 +123,6 @@ async function loadBlog() {
         </a>`;
     }).join('');
 
-    cta.style.display = 'flex';
   }
 }
 
