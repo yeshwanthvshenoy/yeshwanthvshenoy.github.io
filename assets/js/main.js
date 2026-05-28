@@ -50,6 +50,86 @@ mobileOverlay.querySelectorAll('.mobile-link').forEach(link => {
   });
 });
 
+// Engineering Insights — fetch from Medium RSS via rss2json
+async function loadBlog() {
+  const grid  = document.getElementById('blog-grid');
+  const empty = document.getElementById('blog-empty');
+  const cta   = document.getElementById('blog-cta');
+  if (!grid) return;
+
+  try {
+    const controller = new AbortController();
+    const tid = setTimeout(() => controller.abort(), 6000);
+
+    const res  = await fetch(
+      'https://api.rss2json.com/v1/api.json?rss_url=' +
+      encodeURIComponent('https://medium.com/feed/@yeshwanthvshenoy') +
+      '&count=6',
+      { signal: controller.signal }
+    );
+    clearTimeout(tid);
+
+    const data = await res.json();
+
+    if (data.status !== 'ok' || !Array.isArray(data.items) || data.items.length === 0) {
+      showEmpty();
+      return;
+    }
+
+    renderArticles(data.items);
+  } catch (_) {
+    showEmpty();
+  }
+
+  function showEmpty() {
+    grid.style.display  = 'none';
+    empty.style.display = 'flex';
+  }
+
+  function renderArticles(items) {
+    grid.innerHTML = items.map(item => {
+      const date = new Date(item.pubDate).toLocaleDateString('en-US', {
+        year: 'numeric', month: 'short', day: 'numeric',
+      });
+      const words    = (item.content || '').replace(/<[^>]+>/g, '').split(/\s+/).length;
+      const readTime = Math.max(1, Math.round(words / 200));
+      const excerpt  = (item.description || '')
+        .replace(/<[^>]+>/g, '')
+        .replace(/\s+/g, ' ')
+        .trim()
+        .slice(0, 155) + '…';
+      const tags = (item.categories || []).slice(0, 3);
+
+      const thumbHtml = item.thumbnail
+        ? `<img src="${item.thumbnail}" alt="" loading="lazy">`
+        : '';
+
+      const tagsHtml = tags.length
+        ? `<div class="article-tags">${tags.map(t =>
+            `<span class="article-tag">${t}</span>`).join('')}</div>`
+        : '';
+
+      return `
+        <a href="${item.link}" target="_blank" rel="noopener noreferrer" class="article-card">
+          <div class="article-thumb${item.thumbnail ? '' : ' article-thumb-fallback'}">${thumbHtml}</div>
+          <div class="article-body">
+            ${tagsHtml}
+            <h3 class="article-title">${item.title}</h3>
+            <p class="article-excerpt">${excerpt}</p>
+            <div class="article-footer">
+              <span class="article-date">${date}</span>
+              <span class="article-read">${readTime} min read</span>
+            </div>
+          </div>
+        </a>`;
+    }).join('');
+
+    cta.style.display = 'flex';
+  }
+}
+
+loadBlog();
+
 // Typed.js
 new Typed('#typed', {
   strings: [
